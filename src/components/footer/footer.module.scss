@@ -1,0 +1,39 @@
+@import "../../index.scss";
+
+.footer {
+  background-color: $accent-color;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: $header-height;
+  width: 100%;
+  z-index: 100;
+
+  .app_container {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 $app-padding;
+    height: $header-height;
+    align-items: center;
+  }
+}
+
+.tasks_info_box {
+  display: flex;
+
+  .active_tasks_box {
+    margin-right: 10px;
+  }
+}
+
+.autor_info_box {
+  text-align: end;
+}
+
+@media screen and (max-width: $max-desktop-size) {
+  .footer {
+    .app_container {
+      padding: 10px 20px;
+    }
+  }
+}

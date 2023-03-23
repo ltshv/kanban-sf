@@ -1,0 +1,174 @@
+@import "../../index.scss";
+
+.app_container {
+  padding: 0 $app-padding;
+  display: flex;
+}
+
+.tasks_type_list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  :last-child {
+    margin-right: 0px;
+  }
+}
+
+.tasks_box {
+  background-color: $tasks-box-color;
+  border-radius: 15px;
+  //padding: 0 15px;
+  width: 25%;
+  margin-right: 10px;
+  height: min-content;
+  box-shadow: $box-shadow;
+  //max-height: 200px;
+  overflow: hidden;
+
+  h2 {
+    color: black;
+  }
+
+  .tasks_list {
+    padding: 0 15px;
+    float: initial;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 65vh;
+    
+  }
+
+  .no_tasks {
+    color: grey;
+    margin: 15px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 15px;
+  background-color: $header-footer-card-background-color;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  background-color: $tasks-box-color;
+  border-top: 1px solid $background-color;
+
+}
+
+.single_task_container {
+    margin: 0 $app-padding;
+    display: block;
+    background-color: $tasks-box-color;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+}
+
+.single_task_div {
+  height: 100%;
+  padding: $app-padding;
+
+  .single_task_title {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+   //background-color: mix($background-color, $tasks-box-color);
+    border: 3px solid mix($background-color, $tasks-box-color);
+    min-height: 50px;
+    padding: 10px;
+    box-shadow: $box-shadow;
+    outline: none;
+    margin-bottom: 10px;
+    resize: vertical;
+    color: grey;
+    max-height: 300px;
+
+    &:focus {
+        border: 3px solid $accent-color;
+        outline: none;
+        color: black;
+    }
+
+    .area_submited {
+      background-color: $accent-color;
+    }
+
+  }
+}
+
+.submit_desc_change_button {
+  background-color: $accent-color;
+  padding: 10px $app-padding;
+  border: 0;
+  border-radius: 10px;
+}
+
+.changed_desc_capture {
+  color: $accent-color;
+}
+
+.single_task_box {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgb(32, 33, 36);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: $header-footer-card-background-color;
+  }
+
+  h6 {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
+
+.task_descroption {
+  color: grey;
+}
+
+.card_header_wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    max-height: 20px;
+  }
+}
+
+@media screen and (max-width: $max-desktop-size) {
+  main {
+    height: 100%;
+  }
+
+  .tasks_type_list {
+    display: block;
+  }
+
+  .tasks_box {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

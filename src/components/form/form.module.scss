@@ -1,0 +1,35 @@
+@import "../../index.scss";
+
+.add_task_form_box {
+  width: 100%;
+  .add_task_form {
+    display: block;
+    width: 100%;
+    :nth-child(n) {
+      padding: 10px;
+      font-family: $font-family;
+      font-weight: $basic-font-weight;
+      border-radius: 10px;
+      margin-bottom: 5px;
+      border: 0;
+      resize: vertical;
+      width: 100%;
+    }
+
+    .textarea {
+      max-height: 150px;
+      min-height: 50px;
+    }
+
+    .select_dropdown {
+      border: 2px $accent-color solid;
+      padding-right: 10px;
+      outline: none;
+    }
+
+    button {
+      background-color: $accent-color;
+      color: white;
+    }
+  }
+}
